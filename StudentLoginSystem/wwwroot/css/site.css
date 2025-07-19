@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-image: url('/images/mpgs.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20vh;
+}
+.card {
+    transition: all 0.3s ease-in-out;
+}
+    .card:hover {
+        transform: scale(1.01);
+    }
+
+.btn-outline-light:hover {
+    background-color: #138296 !important;
+    color: white !important;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    transition: all 0.3s ease;
+}
+
+/* Background effect */
+.bg-custom-sticky {
+    background: linear-gradient(90deg, #55B4F7); /* Blue to Purple */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 12px 12px;
+}
+
+/* Overlay effect for transparent look on top of content */
+.header_overlay {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+}
+
+/* Optional: Custom header version */
+.header_v1 {
+    padding: 10px 20px;
+}
