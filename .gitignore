@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ProjectEvaluation
+/.vs/StudentLoginSystem/config
+/.vs/StudentLoginSystem
+/StudentLoginSystem/bin/Debug/net8.0/runtimes/win/lib/net7.0
+/StudentLoginSystem/bin
+/StudentLoginSystem/obj

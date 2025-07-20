@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Controllers
+
+@{
+    var isLoginPage = Context.Request.Path == "/";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -14,15 +19,27 @@
     <header>
         <nav class="navbar navbar-expand-lg site-header affix-top bg-custom-sticky header_overlay header_v1">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold text-dark" asp-controller="Account" asp-action="Login">
+                <a class="navbar-brand fw-bold text-white" asp-controller="Account" asp-action="Login">
                     <img src="~/images/logo-white.png" alt="Mama Parsi Logo" style="height: 40px;" />
-                    Student Login System
+                    Student Portal
                 </a>
 
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                <div class="ms-auto">
+                    @if (!isLoginPage)
+                    {
+                        <form asp-controller="Account" asp-action="Logout" method="post" class="ms-auto">
+                            <button type="submit"
+                                    class="btn rounded-pill px-3 text-white"
+                                    style="background-color: #2880AF; border: 1px solid white;">
+                                Logout
+                            </button>
+                        </form>
+                    }
+                </div>
+              @*   <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> *@
 
              @*    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
